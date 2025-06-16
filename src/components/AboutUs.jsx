@@ -43,14 +43,6 @@ export const AboutUs = () => {
       className="relative lg:w-[80%] w-[90%] m-auto py-[60px] flex lg:flex-row flex-col justify-between items-start gap-[50px]"
       id="about"
     >
-      <div
-        className="absolute inset-0 bg-cover bg-center h-[60vw] lg:h-[50vw] top-0 w-full m-auto"
-        style={{
-          backgroundImage: `url(${homeBg})`,
-          opacity: 0.4,
-          zIndex: 0,
-        }}
-      ></div>
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -59,7 +51,7 @@ export const AboutUs = () => {
       >
         <motion.h1
           variants={slideUpVariants}
-          className="text-yellow-500 text-2xl"
+          className="text-orange-700 text-2xl"
         >
           WELCOME TO
         </motion.h1>
@@ -69,7 +61,7 @@ export const AboutUs = () => {
         >
           Caffe Engineering
         </motion.h1>
-        <div className="w-full h-[6px] bg-yellow-500"></div>
+        <div className="w-full h-[6px] bg-orange-700"></div>
         <div className="w-full text-white flex flex-col">
           <h1 className=" text-[40px] font-bold mb-[10px]">
             Company Information
@@ -121,7 +113,7 @@ export const AboutUs = () => {
         <div className="w-full flex justify-center">
           <motion.button
             variants={zoomInVariants}
-            className="bg-yellow-500 hover:bg-white hover:text-black px-10 py-3 rounded-lg font-bold text-black"
+            className="bg-orange-700 hover:bg-white hover:text-black px-10 py-3 rounded-lg font-bold text-white"
             onClick={handleToggle}
           >
             {isExpanded ? "SHOW LESS" : "READ MORE"}

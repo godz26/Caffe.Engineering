@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaXmark, FaBars } from "react-icons/fa6";
 import { Link } from "react-scroll";
+import logo from "../../assets/logo.png"
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +19,7 @@ export const Navbar = () => {
       <div className="flex items-center ml-14 hover:text-orange-700 cursor-pointer">
         <img
           className="w-20 mr-2"
-          src="../../../assets/logo.png"
+          src={logo}
           alt="caffe logo"
         />
         <p>Caffe Engineering</p>
@@ -43,9 +44,9 @@ export const Navbar = () => {
           <li>
             <a
               className="text-black font-normal border-2 border-black rounded-xl py-1 px-4 hover:text-orange-700 hover:border-orange-700"
-              href="#contact"
+              href="#apply"
             >
-              Contact Us
+              Quick Apply
             </a>
           </li>
         </ul>
@@ -84,9 +85,9 @@ export const Navbar = () => {
             <li>
               <a
                 className="text-black font-normal border-2 border-black rounded-xl py-1 px-4 hover:border-orange-700 hover:text-orange-700 "
-                href="#contact"
+                href="#apply"
               >
-                Contact Us
+                Quick Apply
               </a>
             </li>
           </ul>

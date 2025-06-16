@@ -45,7 +45,7 @@ export const Projects = () => {
       >
         <motion.h1
           variants={slideUpVariants}
-          className="text-yellow-500 text-2xl"
+          className="text-orange-500 text-2xl"
         >
           PORTFOLIO
         </motion.h1>
@@ -57,7 +57,7 @@ export const Projects = () => {
         </motion.h1>
         <motion.div
           variants={slideUpVariants}
-          className="w-[120px] h-[6px] bg-yellow-500"
+          className="w-[300px] h-[6px] bg-orange-500 mb-[20px]"
         ></motion.div>
 
         <motion.div
@@ -69,7 +69,7 @@ export const Projects = () => {
           {displayedProjects.map((project, index) => (
             <div key={index} className="w-[80vw] lg:w-full mx-auto">
               <div className="ml-[5px] mb-[10px]">
-                <h2 className="text-yellow-400 font-bold text-xl">
+                <h2 className="text-orange-500 font-bold text-xl">
                   {project.title}
                 </h2>
                 <p className="text-white text-sm italic">{project.location}</p>
@@ -111,7 +111,7 @@ export const Projects = () => {
 
         <motion.button
           variants={zoomInVariants}
-          className="bg-yellow-500 hover:bg-white hover:text-black px-10 py-3 rounded-lg font-bold text-black"
+          className="bg-orange-500 hover:bg-white hover:text-black px-10 py-3 rounded-lg font-bold text-white"
           onClick={() => setShowAllProjects(!showAllProjects)}
         >
           {showAllProjects ? "SHOW LESS" : "SHOW MORE"}

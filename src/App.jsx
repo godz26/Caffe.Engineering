@@ -4,7 +4,7 @@ import { Home } from "./components/Home";
 import { AboutUs } from "./components/AboutUs";
 import { Services } from "./components/Services";
 import { Projects } from "./components/Projects";
-import { Contact } from "./components/Contact";
+import { QuickApply } from "./components/QuickApply";
 import { Footer } from "./components/Footer";
 
 export const App = () => {
@@ -15,7 +15,7 @@ export const App = () => {
       <AboutUs />
       <Services />
       <Projects />
-      <Contact />
+      <QuickApply />
       <Footer />
     </div>
   );

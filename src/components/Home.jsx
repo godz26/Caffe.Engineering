@@ -1,4 +1,4 @@
-import homeImg from "../../assets/heroimg.png";
+import homeImg from "../../assets/homeimage.png";
 import homeBg from "../../assets/wth.png";
 import { motion } from "framer-motion";
 import { slideUpVariants, zoomInVariants } from "./animation";
@@ -13,7 +13,7 @@ export const Home = () => {
         className="absolute inset-0 bg-cover bg-center h-[60vw] lg:h-[50vw] top-0 w-full m-auto"
         style={{
           backgroundImage: `url(${homeBg})`,
-          opacity: 0.4,
+          opacity: 0.2,
           zIndex: 0,
         }}
       ></div>
@@ -59,7 +59,7 @@ export const Home = () => {
           variants={zoomInVariants}
           src={homeImg}
           alt="homeImage"
-          className="lg:h-[600px] h-[300px] lg:mb-[-100px] z-10"
+          className="lg:h-[655px] h-[300px] lg:mb-[-100px] z-10"
         />
       </div>
     </div>

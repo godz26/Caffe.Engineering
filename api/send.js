@@ -43,9 +43,16 @@ export default async function handler(req, res) {
       name: "Caffe Engineering",
       address: process.env.EMAIL_USER,
     },
-    to: ["gestardo134@gmail.com"],
+    to: ["gestardo134@gmail.com", "hrdept.caffeengineering2024@gmail.com"],
     subject: `${jobRole} Application`,
-    text: `Application Details:\n\nName: ${name}\nEmail: ${email}\nGender: ${gender}\nRole: ${jobRole}`,
+    html: `
+        <div>
+          <p>
+            Hi, I'm <strong>${name}</strong>. I'm applying for the <strong>${jobRole}</strong> position.
+            You can reach me at <strong>${email}</strong>. I’ve attached my resume for your review.
+          </p>
+        </div>
+      `,
     attachments: file
       ? [
           {

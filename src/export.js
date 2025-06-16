@@ -1,45 +1,53 @@
-import building from "../assets/building.svg";
-import construction from "../assets/construction.svg";
-import design from "../assets/design.svg";
-import document from "../assets/document.svg";
-import paint from "../assets/paint.svg";
-import support from "../assets/support.svg";
+import edesign from "../assets/edesign.png";
+import est from "../assets/est.png";
+import scabling from "../assets/scabling.png";
+import ctray from "../assets/ctray.png";
+import fabricating from "../assets/fabricating.png";
+import ventilation from "../assets/ventilation.png";
+import aircon from "../assets/aircon.png";
+import firep from "../assets/firep.png";
+import fired from "../assets/fired.png";
+import plumbing from "../assets/plumbing.png";
 
 export const allservices = [
   {
-    icon: building,
-    title: "BUILDING RENOVATION",
-    about:
-      "Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    icon: edesign,
+    title: "ELECTRICAL DESIGN",
   },
   {
-    icon: construction,
-    title: "CONSTRUCTION SERVICES",
-    about:
-      "Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    icon: est,
+    title: "ESTIMATE & INSTALLATION",
   },
   {
-    icon: design,
-    title: "DESIGN & PLANNING",
-    about:
-      "Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    icon: scabling,
+    title: "STRUCTURED CABLING",
   },
   {
-    icon: document,
-    title: "DOCUMENTATION",
-    about:
-      "Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    icon: ctray,
+    title: "CABLE TRAY FABRICATION",
   },
   {
-    icon: paint,
-    title: "INTERIOR DESIGN",
-    about:
-      "Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    icon: fabricating,
+    title: "FABRICATING AND INSTALLATION",
   },
   {
-    icon: support,
-    title: "CUSTOMER SUPPORT",
-    about:
-      "Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    icon: ventilation,
+    title: "HEATING VENTILATION",
+  },
+  {
+    icon: aircon,
+    title: "AIR-CONDITIONING WORKS",
+  },
+  {
+    icon: firep,
+    title: "FIRE PROTECTION WORKS",
+  },
+  {
+    icon: fired,
+    title: "FIRE DETECTION SYSTEM",
+  },
+  {
+    icon: plumbing,
+    title: "PLUMBING WORKS",
   },
 ];

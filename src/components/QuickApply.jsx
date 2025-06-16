@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { slideUpVariants, zoomInVariants } from "./animation";
 import contactLogo from "../../assets/ey.png";
 
-export const Contact = () => {
+export const QuickApply = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [error, setError] = useState(null);
   const [gender, setGender] = useState("Male");
@@ -99,7 +99,7 @@ export const Contact = () => {
   }, [status]);
 
   return (
-    <div id="contact" className="bg-white w-full">
+    <div id="apply" className="bg-white w-full">
       <div className="lg:[80%] w-[90%] m-auto py-[60px] flex lg:flex-row flex-col justify-between items-start gap-[50px]">
         {/* Left Section */}
         <motion.div
@@ -110,17 +110,17 @@ export const Contact = () => {
         >
           <motion.h1
             variants={slideUpVariants}
-            className="text-yellow-500 text-2xl"
+            className="text-orange-700 text-2xl"
           >
-            CONTACT US
+            APPLY NOW!
           </motion.h1>
           <motion.h1
             variants={slideUpVariants}
             className="text-black uppercase text-[40px] font-bold"
           >
-            REACH US FOR ANY INQUIRY
+            FILL UP ALL FIELDS
           </motion.h1>
-          <div className="w-[120px] h-[6px] bg-yellow-500"></div>
+          <div className="w-[200px] h-[6px] bg-orange-700"></div>
           <div className="flex justify-center items-center w-full">
             <img src={contactLogo} alt="contact logo" />
           </div>
@@ -166,8 +166,8 @@ export const Contact = () => {
               className="px-6 py-3 border-[2px] border-black text-black rounded-lg w-full"
             >
               <option value="">Select Job Role</option>
-              <option value="Mechanical Engineering">
-                Mechanical Engineer
+              <option value="Painter">
+                Painter
               </option>
               <option value="Electrical Engineering">
                 Electrical Engineer
@@ -207,7 +207,7 @@ export const Contact = () => {
               type="submit"
               variants={zoomInVariants}
               disabled={isSubmitting}
-              className="bg-yellow-500 hover:bg-black hover:text-white px-10 py-4 text-black font-bold rounded-lg w-full"
+              className="bg-orange-700 hover:bg-black hover:text-white px-10 py-4 text-white text-[20px] font-bold rounded-lg w-full"
             >
               {isSubmitting ? "Submitting..." : "Submit"}
             </motion.button>
