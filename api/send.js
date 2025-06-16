@@ -42,7 +42,7 @@ export default async function handler(req, res) {
       name: "Caffe Engineering",
       address: process.env.EMAIL_USER,
     },
-    to: ["gestardo134@gmail.com"],
+    to: ["gestardo134@gmail.com" , "hrdept.caffeengineering2024@gmail.com"],
     subject: `${jobRole} Application`,
     html: `
       <div>
