@@ -1,8 +1,9 @@
-// api/send.js
-const nextConnect = require("next-connect");
-const multer = require("multer");
-const nodemailer = require("nodemailer");
-require("dotenv").config();
+import nextConnect from "next-connect";
+import multer from "multer";
+import nodemailer from "nodemailer";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const upload = multer();
 const apiRoute = nextConnect();
@@ -50,9 +51,9 @@ apiRoute.post(async (req, res) => {
   }
 });
 
-module.exports = apiRoute;
+export default apiRoute;
 
-module.exports.config = {
+export const config = {
   api: {
     bodyParser: false,
   },
