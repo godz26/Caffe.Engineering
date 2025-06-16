@@ -1,16 +1,32 @@
-import nextConnect from "next-connect";
 import multer from "multer";
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
 
 dotenv.config();
 
+// Setup multer middleware
 const upload = multer();
-const apiRoute = nextConnect();
 
-apiRoute.use(upload.single("file"));
+export const config = {
+  api: {
+    bodyParser: false, // Required for multer to process multipart/form-data
+  },
+};
 
-apiRoute.post(async (req, res) => {
+// Main handler function
+export default async function handler(req, res) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
+  }
+
+  // Wrap multer in a promise
+  await new Promise((resolve, reject) => {
+    upload.single("file")(req, {}, (err) => {
+      if (err) return reject(err);
+      resolve();
+    });
+  });
+
   const { name, email, gender, jobRole } = req.body;
   const file = req.file;
 
@@ -49,12 +65,4 @@ apiRoute.post(async (req, res) => {
     console.error("❌ Email error:", error);
     res.status(500).json({ status: "error", message: error.message });
   }
-});
-
-export default apiRoute;
-
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+}
