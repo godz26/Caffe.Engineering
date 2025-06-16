@@ -1,9 +1,8 @@
-import multer from "multer";
-import nodemailer from "nodemailer";
-import dotenv from "dotenv";
-import { default as nextConnect } from "next-connect";
-
-dotenv.config();
+// api/send.js
+const nextConnect = require("next-connect");
+const multer = require("multer");
+const nodemailer = require("nodemailer");
+require("dotenv").config();
 
 const upload = multer();
 const apiRoute = nextConnect();
@@ -51,10 +50,10 @@ apiRoute.post(async (req, res) => {
   }
 });
 
-export default apiRoute;
+module.exports = apiRoute;
 
-export const config = {
+module.exports.config = {
   api: {
-    bodyParser: false, // Required for multer to work
+    bodyParser: false,
   },
 };
