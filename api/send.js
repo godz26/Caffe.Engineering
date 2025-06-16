@@ -1,9 +1,7 @@
-// api/send.js
-
 import multer from "multer";
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
-import nextConnect from "next-connect";
+import { default as nextConnect } from "next-connect";
 
 dotenv.config();
 
