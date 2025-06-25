@@ -22,31 +22,31 @@ export const Navbar = () => {
           src={logo}
           alt="caffe logo"
         />
-        <p>Caffe Engineering</p>
+        <p className="text-[#001652]">Caffe Engineering</p>
       </div>
       <div>
-        <ul className="lg:flex justify-center items-center gap-6 mr-24 hidden">
+        <ul className=" text-[#f40708] lg:flex justify-center items-center gap-6 mr-24 hidden">
           <li>
             <a className="p-2 hover:text-orange-700" href="#about">
-              About Us
+              ABOUT
             </a>
           </li>
           <li>
             <a className="p-2 hover:text-orange-700" href="#services">
-              Services
+              SERVICES
             </a>
           </li>
           <li>
             <a className="p-2 hover:text-orange-700" href="#projects">
-              Projects
+              PROJECTS
             </a>
           </li>
           <li>
             <a
-              className="text-black font-normal border-2 border-black rounded-xl py-1 px-4 hover:text-orange-700 hover:border-orange-700"
+              className="p-2 hover:text-orange-700"
               href="#apply"
             >
-              Quick Apply
+              QUICK APPLY
             </a>
           </li>
         </ul>
@@ -63,7 +63,7 @@ export const Navbar = () => {
           </div>
         </div>
         <div
-          className={`${isMenuOpen ? "flex" : "hidden"} w-full h-fit bg-white p-4 absolute top-[68px] left-0 z-50 lg:hidden`}
+          className={`${isMenuOpen ? "flex" : "hidden"} w-full h-fit bg-white p-4 absolute top-[110px] left-0 z-50 lg:hidden`}
           onClick={closeMenu}
         >
           <ul className="flex flex-col justify-center items-center gap-2 w-full">
