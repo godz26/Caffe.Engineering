@@ -1,5 +1,5 @@
 import homeImg from "../../assets/homeimage.png";
-import homeBg from "../../assets/wth.png";
+import homeBg from "../../assets/eyp.webm";
 import { motion } from "framer-motion";
 import { slideUpVariants, zoomInVariants } from "./animation";
 
@@ -9,14 +9,16 @@ export const Home = () => {
       className="relative bg-white w-full lg:h-[700px] h-fit m-auto pt-[60px] lg:pt-[0px] lg:px-[150px] px-[20px] flex justify-between 
     items-center lg:flex-row flex-col lg:gap-5 gap-[50px] bg-cover bg-center"
     >
-      <div
-        className="absolute inset-0 bg-cover bg-center h-[60vw] lg:h-[50vw] top-0 w-full m-auto"
-        style={{
-          backgroundImage: `url(${homeBg})`,
-          opacity: 0.2,
-          zIndex: 0,
-        }}
-      ></div>
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 object-cover w-full h-full opacity-50"
+      > 
+        <source src={homeBg} type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
       <motion.div
         initial="hidden"
         whileInView="visible"
