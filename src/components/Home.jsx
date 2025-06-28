@@ -6,7 +6,7 @@ import { slideUpVariants, zoomInVariants } from "./animation";
 export const Home = () => {
   return (
     <div
-      className="relative bg-white w-full lg:h-[700px] h-fit m-auto pt-[60px] lg:pt-[0px] lg:px-[150px] px-[20px] flex justify-between 
+      className="relative bg-white w-full lg:h-[700px] h-fit m-auto pt-[60px] lg:pt-[0px] lg:px-[150px] px-[20px] flex justify-center 
     items-center lg:flex-row flex-col lg:gap-5 gap-[50px] bg-cover bg-center"
     >
       <video
@@ -14,7 +14,7 @@ export const Home = () => {
         muted
         loop
         playsInline
-        className="absolute inset-0 object-cover w-full h-full opacity-50"
+        className="absolute inset-0 object-cover w-full h-full"
       > 
         <source src={homeBg} type="video/webm" />
         Your browser does not support the video tag.
@@ -23,15 +23,15 @@ export const Home = () => {
         initial="hidden"
         whileInView="visible"
         variants={slideUpVariants}
-        className="lg:w-[60%] w-full flex flex-col justify center items-start lg:gap-8 gap-4 z-10"
+        className="lg:w-[90%] mb-[100px] w-full flex flex-col justify-center items-center z-10"
       >
         <motion.h1
           variants={slideUpVariants}
-          className="text-orange-700 font-bold text-2xl"
+          className="text-[#001652] font-bold text-[65px]"
         >
           WE ARE CAFFE ENGINEERING
         </motion.h1>
-        <motion.h1
+        {/* <motion.h1
           variants={slideUpVariants}
           className="text-black uppercase text-[50px] font-bold"
         >
@@ -52,18 +52,8 @@ export const Home = () => {
           >
             REACH US
           </motion.a>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
-      <div className="w-[40%] flex flex-col justify-end items-end">
-        <motion.img
-          initial="hidden"
-          whileInView="visible"
-          variants={zoomInVariants}
-          src={homeImg}
-          alt="homeImage"
-          className="lg:h-[655px] h-[300px] lg:mb-[-100px] z-10"
-        />
-      </div>
     </div>
   );
 };

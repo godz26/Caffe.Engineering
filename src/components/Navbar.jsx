@@ -16,15 +16,18 @@ export const Navbar = () => {
       id="navbar"
       className="flex justify-between items-center w-full bg-white text-black font-bold text-xl"
     >
-      <div className="flex items-center ml-14 hover:text-orange-700 cursor-pointer">
+      <div className="flex items-center ml-[15px] hover:text-orange-700 cursor-pointer">
         <img
-          className="w-20 mr-2"
+          className="h-[60px] w-[70px] mr-2"
           src={logo}
           alt="caffe logo"
         />
-        <p className="text-[#001652]">Caffe Engineering</p>
+        <div className="text-[20px]">
+          <p className="text-[#001652]">Caffe</p>
+          <p className="text-[#001652]">Engineering</p>
+        </div>
       </div>
-      <div>
+      <div className="text-[20px]">
         <ul className=" text-[#f40708] lg:flex justify-center items-center gap-6 mr-24 hidden">
           <li>
             <a className="p-2 hover:text-orange-700" href="#about">
